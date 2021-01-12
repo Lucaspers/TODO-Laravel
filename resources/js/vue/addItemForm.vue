@@ -30,6 +30,7 @@ export default {
             .then( response => {
                 if( response.status == 201 ) {
                     this.item.name = '';
+                    this.$emit('reloadList');
                 }
             })
             .catch(error => {
@@ -49,7 +50,7 @@ export default {
 }
 
 input {
-    background: coral;
+    background: rgb(224, 223, 223);
     border: 0px;
     outline: none;
     padding: 5px;
@@ -62,11 +63,11 @@ input {
 }
 
 .active {
-    color: #00ce25; 
+    color: rgb(84, 84, 226); 
 }
 
 .inactive {
-    color: #9999;
+    color:black;
 }
 
 </style>
